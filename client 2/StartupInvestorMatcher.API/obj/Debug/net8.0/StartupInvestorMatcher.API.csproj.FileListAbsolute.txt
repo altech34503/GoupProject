@@ -1,0 +1,120 @@
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\appsettings.json
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.exe
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.deps.json
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.runtimeconfig.json
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.pdb
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\Npgsql.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.Model.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.Model.pdb
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.csproj.AssemblyReference.cache
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.AssemblyInfoInputs.cache
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.AssemblyInfo.cs
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.csproj.CoreCompileInputs.cache
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets\msbuild.StartupInvestorMatcher.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets\msbuild.build.StartupInvestorMatcher.API.props
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.StartupInvestorMatcher.API.props
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.StartupInvestorMatcher.API.props
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\scopedcss\bundle\StartupInvestorMatcher.API.styles.css
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupI.7C29DEC4.Up2Date
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\refint\StartupInvestorMatcher.API.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.pdb
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.genruntimeconfig.cache
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.API\obj\Debug\net8.0\ref\StartupInvestorMatcher.API.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\appsettings.json
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.exe
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.deps.json
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.runtimeconfig.json
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.pdb
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Npgsql.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupinvestorMatcher.Model.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupinvestorMatcher.Model.pdb
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.csproj.AssemblyReference.cache
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.AssemblyInfoInputs.cache
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.AssemblyInfo.cs
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.csproj.CoreCompileInputs.cache
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets\msbuild.StartupInvestorMatcher.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets\msbuild.build.StartupInvestorMatcher.API.props
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.StartupInvestorMatcher.API.props
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.StartupInvestorMatcher.API.props
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\scopedcss\bundle\StartupInvestorMatcher.API.styles.css
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupI.7C29DEC4.Up2Date
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\refint\StartupInvestorMatcher.API.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.pdb
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.genruntimeconfig.cache
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\ref\StartupInvestorMatcher.API.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\appsettings.json
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.exe
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.deps.json
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.runtimeconfig.json
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupInvestorMatcher.API.pdb
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Npgsql.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupinvestorMatcher.Model.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\bin\Debug\net8.0\StartupinvestorMatcher.Model.pdb
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.csproj.AssemblyReference.cache
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.AssemblyInfoInputs.cache
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.AssemblyInfo.cs
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.csproj.CoreCompileInputs.cache
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets\msbuild.StartupInvestorMatcher.API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets\msbuild.build.StartupInvestorMatcher.API.props
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.StartupInvestorMatcher.API.props
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.StartupInvestorMatcher.API.props
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\scopedcss\bundle\StartupInvestorMatcher.API.styles.css
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupI.7C29DEC4.Up2Date
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\refint\StartupInvestorMatcher.API.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.pdb
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\StartupInvestorMatcher.API.genruntimeconfig.cache
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.API\obj\Debug\net8.0\ref\StartupInvestorMatcher.API.dll

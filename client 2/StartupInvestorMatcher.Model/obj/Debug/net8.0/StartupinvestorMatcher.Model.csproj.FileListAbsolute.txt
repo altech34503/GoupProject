@@ -1,0 +1,36 @@
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.Model\bin\Debug\net8.0\StartupInvestorMatcher.Model.deps.json
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.Model\bin\Debug\net8.0\StartupInvestorMatcher.Model.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.Model\bin\Debug\net8.0\StartupInvestorMatcher.Model.pdb
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupInvestorMatcher.Model.csproj.AssemblyReference.cache
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupInvestorMatcher.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupInvestorMatcher.Model.AssemblyInfoInputs.cache
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupInvestorMatcher.Model.AssemblyInfo.cs
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupInvestorMatcher.Model.csproj.CoreCompileInputs.cache
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupInvestorMatcher.Model.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.Model\obj\Debug\net8.0\refint\StartupInvestorMatcher.Model.dll
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupInvestorMatcher.Model.pdb
+C:\Users\ale_c\Desktop\APsim\client\StartupInvestorMatcher.Model\obj\Debug\net8.0\ref\StartupInvestorMatcher.Model.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.Model\bin\Debug\net8.0\StartupinvestorMatcher.Model.deps.json
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.Model\bin\Debug\net8.0\StartupinvestorMatcher.Model.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.Model\bin\Debug\net8.0\StartupinvestorMatcher.Model.pdb
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupinvestorMatcher.Model.csproj.AssemblyReference.cache
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupinvestorMatcher.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupinvestorMatcher.Model.AssemblyInfoInputs.cache
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupinvestorMatcher.Model.AssemblyInfo.cs
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupinvestorMatcher.Model.csproj.CoreCompileInputs.cache
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupinvestorMatcher.Model.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\refint\StartupinvestorMatcher.Model.dll
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupinvestorMatcher.Model.pdb
+C:\Users\ale_c\Desktop\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\ref\StartupinvestorMatcher.Model.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.Model\bin\Debug\net8.0\StartupinvestorMatcher.Model.deps.json
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.Model\bin\Debug\net8.0\StartupinvestorMatcher.Model.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.Model\bin\Debug\net8.0\StartupinvestorMatcher.Model.pdb
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupinvestorMatcher.Model.csproj.AssemblyReference.cache
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupinvestorMatcher.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupinvestorMatcher.Model.AssemblyInfoInputs.cache
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupinvestorMatcher.Model.AssemblyInfo.cs
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupinvestorMatcher.Model.csproj.CoreCompileInputs.cache
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupinvestorMatcher.Model.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\refint\StartupinvestorMatcher.Model.dll
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\StartupinvestorMatcher.Model.pdb
+C:\Users\ale_c\Desktop\APsim\client 2\StartupInvestorMatcher.Model\obj\Debug\net8.0\ref\StartupinvestorMatcher.Model.dll
