@@ -16,18 +16,18 @@ namespace StartupInvestorMatcher.API.Controllers
         // Constructor to inject both repositories
         public InvestorController(InvestorRepository investorRepository, StartupRepository startupRepository)
         {
-            InvestorRepository = investorRepository;
-            StartupRepository = startupRepository;
+            InvestorRepository = investorRepository ?? throw new ArgumentNullException(nameof(investorRepository));
+            StartupRepository = startupRepository ?? throw new ArgumentNullException(nameof(startupRepository));
         }
 
         // GET: api/investor/{id}
         [HttpGet("{id}")]
         public ActionResult<Investor> GetInvestor([FromRoute] int id)
         {
-            Investor investor = InvestorRepository.GetInvestorById(id);
+            var investor = InvestorRepository.GetInvestorById(id);
             if (investor == null)
             {
-                return NotFound();
+                return NotFound($"Investor with ID {id} not found.");
             }
             return Ok(investor);
         }
@@ -36,7 +36,12 @@ namespace StartupInvestorMatcher.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Investor>> GetInvestors()
         {
-            return Ok(InvestorRepository.GetInvestors());
+            var investors = InvestorRepository.GetInvestors();
+            if (investors == null || !investors.Any())
+            {
+                return NotFound("No investors found.");
+            }
+            return Ok(investors);
         }
 
         // POST: api/investor
@@ -45,28 +50,22 @@ namespace StartupInvestorMatcher.API.Controllers
         {
             if (investor == null)
             {
-                return BadRequest("Investor info not correct");
+                return BadRequest("Investor information is not correct.");
             }
 
-            // Automatically assign a member_id if not provided
-            if (investor.MemberId == 0)
-            {
-                // Fetch all member IDs from both Investors and Startups
-                var investorIds = InvestorRepository.GetInvestors().Select(i => i.MemberId);
-                var startupIds = StartupRepository.GetStartups().Select(s => s.MemberId);
-
-                // Combine all member IDs and find the maximum
-                var allMemberIds = investorIds.Concat(startupIds);
-                investor.MemberId = allMemberIds.Any() ? allMemberIds.Max() + 1 : 1;
-            }
+            // Automatically assign a member_id
+            var investorIds = InvestorRepository.GetInvestors()?.Select(i => i.MemberId) ?? Enumerable.Empty<int>();
+            var startupIds = StartupRepository.GetStartups()?.Select(s => s.MemberId) ?? Enumerable.Empty<int>();
+            var allMemberIds = investorIds.Concat(startupIds);
+            investor.MemberId = allMemberIds.Any() ? allMemberIds.Max() + 1 : 1;
 
             bool status = InvestorRepository.InsertInvestor(investor);
             if (status)
             {
-                return Ok();
+                return Ok(new { message = "Investor created successfully", memberId = investor.MemberId });
             }
 
-            return BadRequest();
+            return BadRequest("Unable to create investor.");
         }
 
         // PUT: api/investor
@@ -75,32 +74,33 @@ namespace StartupInvestorMatcher.API.Controllers
         {
             if (investor == null)
             {
-                return BadRequest("Investor info not correct");
+                return BadRequest("Investor information is not correct.");
             }
 
-            Investor existing = InvestorRepository.GetInvestorById(investor.MemberId);
+            // Ensure the investor exists
+            var existing = InvestorRepository.GetInvestorById(investor.MemberId);
             if (existing == null)
             {
-                return NotFound($"Investor with ID {investor.MemberId} not found");
+                return NotFound($"Investor with ID {investor.MemberId} not found.");
             }
 
             bool status = InvestorRepository.UpdateInvestor(investor);
             if (status)
             {
-                return Ok();
+                return Ok("Investor updated successfully.");
             }
 
-            return BadRequest("Something went wrong");
+            return BadRequest("Unable to update investor.");
         }
 
         // DELETE: api/investor/{id}
         [HttpDelete("{id}")]
         public ActionResult DeleteInvestor([FromRoute] int id)
         {
-            Investor existing = InvestorRepository.GetInvestorById(id);
+            var existing = InvestorRepository.GetInvestorById(id);
             if (existing == null)
             {
-                return NotFound($"Investor with ID {id} not found");
+                return NotFound($"Investor with ID {id} not found.");
             }
 
             bool status = InvestorRepository.DeleteInvestor(id);
@@ -109,7 +109,7 @@ namespace StartupInvestorMatcher.API.Controllers
                 return NoContent();
             }
 
-            return BadRequest($"Unable to delete investor with ID {id}");
+            return BadRequest($"Unable to delete investor with ID {id}.");
         }
 
         // GET: api/investor/next-member-id
@@ -117,8 +117,8 @@ namespace StartupInvestorMatcher.API.Controllers
         public ActionResult<int> GetNextMemberId()
         {
             // Fetch all member IDs from both Investors and Startups
-            var investorIds = InvestorRepository.GetInvestors().Select(i => i.MemberId);
-            var startupIds = StartupRepository.GetStartups().Select(s => s.MemberId);
+            var investorIds = InvestorRepository.GetInvestors()?.Select(i => i.MemberId) ?? Enumerable.Empty<int>();
+            var startupIds = StartupRepository.GetStartups()?.Select(s => s.MemberId) ?? Enumerable.Empty<int>();
 
             // Combine all member IDs and find the maximum
             var allMemberIds = investorIds.Concat(startupIds);

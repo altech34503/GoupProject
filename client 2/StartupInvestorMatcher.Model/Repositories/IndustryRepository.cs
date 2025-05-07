@@ -1,6 +1,5 @@
 using Npgsql;
 using NpgsqlTypes;
-using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using StartupInvestorMatcher.Model.Entities;
 
@@ -8,7 +7,9 @@ namespace StartupInvestorMatcher.Model.Repositories
 {
     public class IndustryRepository : BaseRepository
     {
-        public IndustryRepository(IConfiguration configuration) : base(configuration) { }
+        public IndustryRepository(string connectionString) : base(connectionString)
+        {
+        }
 
         public List<Industry> GetIndustries()
         {
@@ -18,17 +19,15 @@ namespace StartupInvestorMatcher.Model.Repositories
             cmd.CommandText = "SELECT * FROM industry";
 
             var data = GetData(dbConn, cmd);
-            if (data != null)
+            while (data.Read())
             {
-                while (data.Read())
+                industries.Add(new Industry
                 {
-                    industries.Add(new Industry
-                    {
-                        IndustryId = (int)data["industry_id"],
-                        IndustryName = data["industry_name"].ToString()
-                    });
-                }
+                    IndustryId = Convert.ToInt32(data["industry_id"]),
+                    IndustryName = data["industry_name"].ToString()
+                });
             }
+
             return industries;
         }
 

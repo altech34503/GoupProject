@@ -1,50 +1,25 @@
-using Newtonsoft.Json; // For JsonProperty
-using System.ComponentModel.DataAnnotations.Schema; // For Column attribute
+using System.Text.Json.Serialization;
 
 namespace StartupInvestorMatcher.Model.Entities
 {
     public class Investor
     {
-        // Constructor to initialize with the associated Member ID
-        public Investor(int memberId)
-        {
-            MemberId = memberId;
-            Name_Investor = string.Empty; // Default value
-            Overview_Investor = string.Empty; // Default value
-            Member = new Member(memberId); // Pass the memberId to the Member constructor
-        }
-
-        // Foreign key to the Member entity
-        [JsonProperty("memberId")]
-        [Column("member_id")]
+        [JsonPropertyName("id")]
         public int MemberId { get; set; }
 
-        // Name of the investor
-        [JsonProperty("nameInvestor")]
-        [Column("name_investor")]
-        public string Name_Investor { get; set; }
+        [JsonPropertyName("name_Investor")]
+        public string NameInvestor { get; set; } = string.Empty;
 
-        // Description or summary of the investor
-        [JsonProperty("overviewInvestor")]
-        [Column("overview_investor")]
-        public string Overview_Investor { get; set; }
+        [JsonPropertyName("overview_Investor")]
+        public string OverviewInvestor { get; set; } = string.Empty;
 
-        // Country identifier (foreign key or enum reference)
-        [JsonProperty("countryId")]
-        [Column("country_id")]
-        public int Country_Id { get; set; }
+        [JsonPropertyName("country_Id")]
+        public int CountryId { get; set; }
 
-        // Industry identifier (foreign key or enum reference)
-        [JsonProperty("industryId")]
-        [Column("industry_id")]
-        public int Industry_Id { get; set; }
+        [JsonPropertyName("industry_Id")]
+        public int IndustryId { get; set; }
 
-        // Investment size preference identifier
-        [JsonProperty("investmentSizeId")]
-        [Column("investment_size_id")]
-        public int Investment_Size_Id { get; set; }
-
-        // Optional: Navigation property to Member (if using Entity Framework and needed)
-        public Member Member { get; set; }
+        [JsonPropertyName("investment_Size_Id")]
+        public int InvestmentSizeId { get; set; }
     }
 }

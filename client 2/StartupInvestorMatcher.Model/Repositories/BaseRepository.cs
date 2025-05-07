@@ -1,33 +1,60 @@
+using System;
+using System.Data;
 using Npgsql;
-using Microsoft.Extensions.Configuration;
 
-public class BaseRepository
+namespace StartupInvestorMatcher.Model.Repositories
 {
-protected string ConnectionString {get;}
-public BaseRepository(IConfiguration configuration) {
-ConnectionString = configuration.GetConnectionString("sim_database") ?? throw new ArgumentNullException("Connection string for 'postgres' is not configured.");
-}
-protected NpgsqlDataReader GetData(NpgsqlConnection conn, NpgsqlCommand cmd)
-{
-conn.Open();
-return cmd.ExecuteReader();
-}
-protected bool InsertData(NpgsqlConnection conn, NpgsqlCommand cmd)
-{
-conn.Open();
-cmd.ExecuteNonQuery();
-return true;
-}
-protected bool UpdateData(NpgsqlConnection conn, NpgsqlCommand cmd)
-{
-conn.Open();
-cmd.ExecuteNonQuery();
-return true;
-}
-protected bool DeleteData(NpgsqlConnection conn, NpgsqlCommand cmd)
-{
-conn.Open();
-cmd.ExecuteNonQuery();
-return true;
-}
+    public class BaseRepository
+    {
+        protected string ConnectionString;
+
+        public BaseRepository(string connectionString)
+        {
+            ConnectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString));
+        }
+
+        protected IDataReader GetData(NpgsqlConnection conn, NpgsqlCommand cmd)
+        {
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Open();
+            }
+
+            cmd.Connection = conn;
+            return cmd.ExecuteReader();
+        }
+
+        protected bool InsertData(NpgsqlConnection conn, NpgsqlCommand cmd)
+        {
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Open();
+            }
+
+            cmd.Connection = conn;
+            return cmd.ExecuteNonQuery() > 0;
+        }
+
+        protected bool UpdateData(NpgsqlConnection conn, NpgsqlCommand cmd)
+        {
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Open();
+            }
+
+            cmd.Connection = conn;
+            return cmd.ExecuteNonQuery() > 0;
+        }
+
+        protected bool DeleteData(NpgsqlConnection conn, NpgsqlCommand cmd)
+        {
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Open();
+            }
+
+            cmd.Connection = conn;
+            return cmd.ExecuteNonQuery() > 0;
+        }
+    }
 }

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Microsoft.Extensions.Configuration;
 using Npgsql;
 using NpgsqlTypes;
 using StartupInvestorMatcher.Model.Entities;
@@ -9,139 +8,156 @@ namespace StartupInvestorMatcher.Model.Repositories
 {
     public class InvestorRepository : BaseRepository
     {
-        public InvestorRepository(IConfiguration configuration) : base(configuration)
+        public InvestorRepository(string connectionString) : base(connectionString)
         {
         }
 
-        // Get Investor by Member ID
         public Investor GetInvestorById(int id)
         {
-            NpgsqlConnection dbConn = null;
-            try
+            using (var dbConn = new NpgsqlConnection(ConnectionString))
             {
-                dbConn = new NpgsqlConnection(ConnectionString);
-                var cmd = dbConn.CreateCommand();
-                cmd.CommandText = "SELECT * FROM investor WHERE member_id = @id";
-                cmd.Parameters.Add("@id", NpgsqlDbType.Integer).Value = id;
-
-                var data = GetData(dbConn, cmd);
-                if (data != null && data.Read())
+                try
                 {
-                    return new Investor(Convert.ToInt32(data["member_id"]))
-                    {
-                        Name_Investor = data["name_investor"].ToString(),
-                        Overview_Investor = data["overview_investor"].ToString(),
-                        Country_Id = Convert.ToInt32(data["country_id"]),
-                        Industry_Id = Convert.ToInt32(data["industry_id"]),
-                        Investment_Size_Id = Convert.ToInt32(data["investment_size_id"])
-                    };
-                }
+                    var cmd = dbConn.CreateCommand();
+                    cmd.CommandText = "SELECT * FROM investor WHERE member_id = @id";
+                    cmd.Parameters.Add("@id", NpgsqlDbType.Integer).Value = id;
 
-                return null;
-            }
-            finally
-            {
-                dbConn?.Close();
+                    var data = GetData(dbConn, cmd);
+                    if (data != null && data.Read())
+                    {
+                        return new Investor
+                        {
+                            MemberId = Convert.ToInt32(data["member_id"]),
+                            NameInvestor = data["name_investor"].ToString(),
+                            OverviewInvestor = data["overview_investor"].ToString(),
+                            CountryId = Convert.ToInt32(data["country_id"]),
+                            IndustryId = Convert.ToInt32(data["industry_id"]),
+                            InvestmentSizeId = Convert.ToInt32(data["investment_size_id"])
+                        };
+                    }
+
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error fetching investor by ID", ex);
+                }
             }
         }
 
-        // Get all Investors
         public List<Investor> GetInvestors()
         {
-            NpgsqlConnection dbConn = null;
             var investors = new List<Investor>();
-            try
+            using (var dbConn = new NpgsqlConnection(ConnectionString))
             {
-                dbConn = new NpgsqlConnection(ConnectionString);
-                var cmd = dbConn.CreateCommand();
-                cmd.CommandText = "SELECT * FROM investor";
-
-                var data = GetData(dbConn, cmd);
-                while (data != null && data.Read())
+                try
                 {
-                    Investor inv = new Investor(Convert.ToInt32(data["member_id"]))
+                    var cmd = dbConn.CreateCommand();
+                    cmd.CommandText = "SELECT * FROM investor";
+
+                    var data = GetData(dbConn, cmd);
+                    while (data != null && data.Read())
                     {
-                        Name_Investor = data["name_investor"].ToString(),
-                        Overview_Investor = data["overview_investor"].ToString(),
-                        Country_Id = Convert.ToInt32(data["country_id"]),
-                        Industry_Id = Convert.ToInt32(data["industry_id"]),
-                        Investment_Size_Id = Convert.ToInt32(data["investment_size_id"])
-                    };
-                    investors.Add(inv);
+                        investors.Add(new Investor
+                        {
+                            MemberId = Convert.ToInt32(data["member_id"]),
+                            NameInvestor = data["name_investor"].ToString(),
+                            OverviewInvestor = data["overview_investor"].ToString(),
+                            CountryId = Convert.ToInt32(data["country_id"]),
+                            IndustryId = Convert.ToInt32(data["industry_id"]),
+                            InvestmentSizeId = Convert.ToInt32(data["investment_size_id"])
+                        });
+                    }
+
+                    return investors;
                 }
-
-                return investors;
-            }
-            finally
-            {
-                dbConn?.Close();
+                catch (Exception ex)
+                {
+                    throw new Exception("Error fetching all investors", ex);
+                }
             }
         }
 
-        // Insert new Investor
-        public bool InsertInvestor(Investor inv)
+        public bool InsertInvestor(Investor investor)
         {
-            NpgsqlConnection dbConn = null;
-            try
+            using (var dbConn = new NpgsqlConnection(ConnectionString))
             {
-                dbConn = new NpgsqlConnection(ConnectionString);
-                var cmd = dbConn.CreateCommand();
-                cmd.CommandText = @"
-                    INSERT INTO investor (member_id, name_investor, overview_investor, country_id, industry_id, investment_size_id)
-                    VALUES (@member_id, @name_investor, @overview_investor, @country_id, @industry_id, @investment_size_id)
-                ";
+                try
+                {
+                    dbConn.Open();
+                    var cmd = dbConn.CreateCommand();
+                    cmd.CommandText = @"
+                        INSERT INTO investor (member_id, name_investor, overview_investor, country_id, industry_id, investment_size_id)
+                        VALUES (@member_id, @name_investor, @overview_investor, @country_id, @industry_id, @investment_size_id)";
+                    cmd.Parameters.AddWithValue("@member_id", NpgsqlDbType.Integer, investor.MemberId);
+                    cmd.Parameters.AddWithValue("@name_investor", NpgsqlDbType.Text, investor.NameInvestor);
+                    cmd.Parameters.AddWithValue("@overview_investor", NpgsqlDbType.Text, investor.OverviewInvestor);
+                    cmd.Parameters.AddWithValue("@country_id", NpgsqlDbType.Integer, investor.CountryId);
+                    cmd.Parameters.AddWithValue("@industry_id", NpgsqlDbType.Integer, investor.IndustryId);
+                    cmd.Parameters.AddWithValue("@investment_size_id", NpgsqlDbType.Integer, investor.InvestmentSizeId);
 
-                cmd.Parameters.AddWithValue("@member_id", NpgsqlDbType.Integer, inv.MemberId);
-                cmd.Parameters.AddWithValue("@name_investor", NpgsqlDbType.Text, inv.Name_Investor);
-                cmd.Parameters.AddWithValue("@overview_investor", NpgsqlDbType.Text, inv.Overview_Investor);
-                cmd.Parameters.AddWithValue("@country_id", NpgsqlDbType.Integer, inv.Country_Id);
-                cmd.Parameters.AddWithValue("@industry_id", NpgsqlDbType.Integer, inv.Industry_Id);
-                cmd.Parameters.AddWithValue("@investment_size_id", NpgsqlDbType.Integer, inv.Investment_Size_Id);
-
-                return InsertData(dbConn, cmd);
-            }
-            finally
-            {
-                dbConn?.Close();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error inserting investor: {ex.Message}");
+                    return false;
+                }
             }
         }
 
-        // Update existing Investor
-        public bool UpdateInvestor(Investor inv)
+        public bool UpdateInvestor(Investor investor)
         {
-            var dbConn = new NpgsqlConnection(ConnectionString);
-            var cmd = dbConn.CreateCommand();
-            cmd.CommandText = @"
-                UPDATE investor SET
-                    name_investor = @name_investor,
-                    overview_investor = @overview_investor,
-                    country_id = @country_id,
-                    industry_id = @industry_id,
-                    investment_size_id = @investment_size_id
-                WHERE member_id = @member_id
-            ";
+            using (var dbConn = new NpgsqlConnection(ConnectionString))
+            {
+                try
+                {
+                    dbConn.Open();
+                    var cmd = dbConn.CreateCommand();
+                    cmd.CommandText = @"
+                        UPDATE investor
+                        SET name_investor = @name_investor,
+                            overview_investor = @overview_investor,
+                            country_id = @country_id,
+                            industry_id = @industry_id,
+                            investment_size_id = @investment_size_id
+                        WHERE member_id = @member_id";
+                    cmd.Parameters.AddWithValue("@name_investor", NpgsqlDbType.Text, investor.NameInvestor);
+                    cmd.Parameters.AddWithValue("@overview_investor", NpgsqlDbType.Text, investor.OverviewInvestor);
+                    cmd.Parameters.AddWithValue("@country_id", NpgsqlDbType.Integer, investor.CountryId);
+                    cmd.Parameters.AddWithValue("@industry_id", NpgsqlDbType.Integer, investor.IndustryId);
+                    cmd.Parameters.AddWithValue("@investment_size_id", NpgsqlDbType.Integer, investor.InvestmentSizeId);
+                    cmd.Parameters.AddWithValue("@member_id", NpgsqlDbType.Integer, investor.MemberId);
 
-            cmd.Parameters.AddWithValue("@name_investor", NpgsqlDbType.Text, inv.Name_Investor);
-            cmd.Parameters.AddWithValue("@overview_investor", NpgsqlDbType.Text, inv.Overview_Investor);
-            cmd.Parameters.AddWithValue("@country_id", NpgsqlDbType.Integer, inv.Country_Id);
-            cmd.Parameters.AddWithValue("@industry_id", NpgsqlDbType.Integer, inv.Industry_Id);
-            cmd.Parameters.AddWithValue("@investment_size_id", NpgsqlDbType.Integer, inv.Investment_Size_Id);
-            cmd.Parameters.AddWithValue("@member_id", NpgsqlDbType.Integer, inv.MemberId);
-
-            return UpdateData(dbConn, cmd);
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error updating investor: {ex.Message}");
+                    return false;
+                }
+            }
         }
 
-        // Delete Investor by Member ID
         public bool DeleteInvestor(int id)
         {
-            var dbConn = new NpgsqlConnection(ConnectionString);
-            var cmd = dbConn.CreateCommand();
-            cmd.CommandText = "DELETE FROM investor WHERE member_id = @member_id";
-            cmd.Parameters.AddWithValue("@member_id", NpgsqlDbType.Integer, id);
+            using (var dbConn = new NpgsqlConnection(ConnectionString))
+            {
+                try
+                {
+                    dbConn.Open();
+                    var cmd = dbConn.CreateCommand();
+                    cmd.CommandText = "DELETE FROM investor WHERE member_id = @id";
+                    cmd.Parameters.AddWithValue("@id", NpgsqlDbType.Integer, id);
 
-            bool result = DeleteData(dbConn, cmd);
-
-            return result;
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error deleting investor: {ex.Message}");
+                    return false;
+                }
+            }
         }
     }
 }
