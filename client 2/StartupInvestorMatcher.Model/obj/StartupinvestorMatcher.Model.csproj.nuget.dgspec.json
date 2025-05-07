@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ale_c\\Desktop\\APsim\\client 2\\StartupInvestorMatcher.Model\\StartupinvestorMatcher.Model.csproj": {}
+    "/Users/troybjorkman/GoupProject/client 2/StartupInvestorMatcher.Model/StartupinvestorMatcher.Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ale_c\\Desktop\\APsim\\client 2\\StartupInvestorMatcher.Model\\StartupinvestorMatcher.Model.csproj": {
+    "/Users/troybjorkman/GoupProject/client 2/StartupInvestorMatcher.Model/StartupinvestorMatcher.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ale_c\\Desktop\\APsim\\client 2\\StartupInvestorMatcher.Model\\StartupinvestorMatcher.Model.csproj",
+        "projectUniqueName": "/Users/troybjorkman/GoupProject/client 2/StartupInvestorMatcher.Model/StartupinvestorMatcher.Model.csproj",
         "projectName": "StartupinvestorMatcher.Model",
-        "projectPath": "C:\\Users\\ale_c\\Desktop\\APsim\\client 2\\StartupInvestorMatcher.Model\\StartupinvestorMatcher.Model.csproj",
-        "packagesPath": "C:\\Users\\ale_c\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ale_c\\Desktop\\APsim\\client 2\\StartupInvestorMatcher.Model\\obj\\",
+        "projectPath": "/Users/troybjorkman/GoupProject/client 2/StartupInvestorMatcher.Model/StartupinvestorMatcher.Model.csproj",
+        "packagesPath": "/Users/troybjorkman/.nuget/packages/",
+        "outputPath": "/Users/troybjorkman/GoupProject/client 2/StartupInvestorMatcher.Model/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ale_c\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/troybjorkman/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -46,6 +47,10 @@
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "NpgSql": {
               "target": "Package",
@@ -63,12 +68,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.12, 8.0.12]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.12, 8.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

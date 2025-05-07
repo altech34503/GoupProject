@@ -1,8 +1,8 @@
 using StartupInvestorMatcher.Model.Entities;
 using StartupInvestorMatcher.Model.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace StartupInvestorMatcher.API.Controllers
 {
@@ -10,19 +10,21 @@ namespace StartupInvestorMatcher.API.Controllers
     [ApiController]
     public class InvestorController : ControllerBase
     {
-        protected InvestorRepository Repository { get; }
+        protected InvestorRepository InvestorRepository { get; }
+        protected StartupRepository StartupRepository { get; }
 
-        // Constructor to inject the InvestorRepository
-        public InvestorController(InvestorRepository repository)
+        // Constructor to inject both repositories
+        public InvestorController(InvestorRepository investorRepository, StartupRepository startupRepository)
         {
-            Repository = repository;
+            InvestorRepository = investorRepository;
+            StartupRepository = startupRepository;
         }
 
         // GET: api/investor/{id}
         [HttpGet("{id}")]
         public ActionResult<Investor> GetInvestor([FromRoute] int id)
         {
-            Investor investor = Repository.GetInvestorById(id);
+            Investor investor = InvestorRepository.GetInvestorById(id);
             if (investor == null)
             {
                 return NotFound();
@@ -34,7 +36,7 @@ namespace StartupInvestorMatcher.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Investor>> GetInvestors()
         {
-            return Ok(Repository.GetInvestors());
+            return Ok(InvestorRepository.GetInvestors());
         }
 
         // POST: api/investor
@@ -46,7 +48,19 @@ namespace StartupInvestorMatcher.API.Controllers
                 return BadRequest("Investor info not correct");
             }
 
-            bool status = Repository.InsertInvestor(investor);
+            // Automatically assign a member_id if not provided
+            if (investor.MemberId == 0)
+            {
+                // Fetch all member IDs from both Investors and Startups
+                var investorIds = InvestorRepository.GetInvestors().Select(i => i.MemberId);
+                var startupIds = StartupRepository.GetStartups().Select(s => s.MemberId);
+
+                // Combine all member IDs and find the maximum
+                var allMemberIds = investorIds.Concat(startupIds);
+                investor.MemberId = allMemberIds.Any() ? allMemberIds.Max() + 1 : 1;
+            }
+
+            bool status = InvestorRepository.InsertInvestor(investor);
             if (status)
             {
                 return Ok();
@@ -64,13 +78,13 @@ namespace StartupInvestorMatcher.API.Controllers
                 return BadRequest("Investor info not correct");
             }
 
-            Investor existing = Repository.GetInvestorById(investor.MemberId);
+            Investor existing = InvestorRepository.GetInvestorById(investor.MemberId);
             if (existing == null)
             {
                 return NotFound($"Investor with ID {investor.MemberId} not found");
             }
 
-            bool status = Repository.UpdateInvestor(investor);
+            bool status = InvestorRepository.UpdateInvestor(investor);
             if (status)
             {
                 return Ok();
@@ -83,19 +97,35 @@ namespace StartupInvestorMatcher.API.Controllers
         [HttpDelete("{id}")]
         public ActionResult DeleteInvestor([FromRoute] int id)
         {
-            Investor existing = Repository.GetInvestorById(id);
+            Investor existing = InvestorRepository.GetInvestorById(id);
             if (existing == null)
             {
                 return NotFound($"Investor with ID {id} not found");
             }
 
-            bool status = Repository.DeleteInvestor(id);
+            bool status = InvestorRepository.DeleteInvestor(id);
             if (status)
             {
                 return NoContent();
             }
 
             return BadRequest($"Unable to delete investor with ID {id}");
+        }
+
+        // GET: api/investor/next-member-id
+        [HttpGet("next-member-id")]
+        public ActionResult<int> GetNextMemberId()
+        {
+            // Fetch all member IDs from both Investors and Startups
+            var investorIds = InvestorRepository.GetInvestors().Select(i => i.MemberId);
+            var startupIds = StartupRepository.GetStartups().Select(s => s.MemberId);
+
+            // Combine all member IDs and find the maximum
+            var allMemberIds = investorIds.Concat(startupIds);
+            int nextMemberId = allMemberIds.Any() ? allMemberIds.Max() + 1 : 1;
+
+            // Return the next available member_id
+            return Ok(nextMemberId);
         }
     }
 }

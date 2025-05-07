@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "uQkjgGvxcXCyfv8vWWB28G5KvXfMyyy3Kwbt+JfYmH8=",
+  "Hash": "JOMx9CKl0CBZRDySFf6IqJsd4AP0mS+x7Ms0gLCJqmQ=",
   "Source": "StartupInvestorMatcher.API",
   "BasePath": "_content/StartupInvestorMatcher.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
