@@ -74,23 +74,23 @@ namespace StartupInvestorMatcher.API.Controllers
         {
             if (investor == null)
             {
-                return BadRequest("Investor information is not correct.");
+                return BadRequest(new { message = "Investor information is not correct." });
             }
 
             // Ensure the investor exists
             var existing = InvestorRepository.GetInvestorById(investor.MemberId);
             if (existing == null)
             {
-                return NotFound($"Investor with ID {investor.MemberId} not found.");
+                return NotFound(new { message = $"Investor with ID {investor.MemberId} not found." });
             }
 
             bool status = InvestorRepository.UpdateInvestor(investor);
             if (status)
             {
-                return Ok("Investor updated successfully.");
+                return Ok(new { message = "Investor updated successfully." });
             }
 
-            return BadRequest("Unable to update investor.");
+            return BadRequest(new { message = "Unable to update investor." });
         }
 
         // DELETE: api/investor/{id}
